@@ -18,9 +18,14 @@ select existing watchlist to add the stock to watchlist. Use techniques to
 save and show watchlist items from what the user has added to
 watchlist from Stocks Details screen
 
-View All Screen: A page with pagination where users can see all the list of
-stocks under specific sections on explore. Should contain pagination if
-needed.
+View All Screen: A page with **infinite scroll pagination** where users can see all the list of
+stocks under specific sections on explore. Features include:
+
+- Loads 10 items per page initially
+- Automatically loads more items as user scrolls
+- Shows "Showing X of Y" counter in header
+- Loading indicator during pagination
+- Optimized performance with memoized data
 
 ## Screenshots
 
@@ -170,6 +175,8 @@ const { state, dispatch } = useAppContext();
 - Promise.allSettled for parallel data fetching
 - Search debouncing (500ms delay) to reduce API calls
 - Timeout-based debouncing implementation using useRef
+- **Infinite scroll pagination** on View All screens (10 items per page)
+- Optimized pagination with useMemo for data slicing
 
 ### State Management
 

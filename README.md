@@ -1,14 +1,45 @@
 # Stock Market Tracker
 
-A React Native application for tracking stock market data, managing watchlists, and viewing real-time stock information.
+A React Native application for tracking stock market data, managing watchlists, and viewing real-time stock information as per Growws frontend Assignment .I have implemented all the functionalities as well as some brownie features as mentinoned in the document.
+
+Explore Screen: A page with Top Gainers and Losers section.
+Each section contains a grid of cards that shows information about stocks/etfs.
+
+Watchlist: A page where we show all watchlist lists. An empty state
+should be there if no watchlist is present.
+
+Product Screen: A page showing basic information of stocks/etfs and a line
+graph of prices. Users can add / remove stocks to the watchlist from this
+screen. The icon on this screen should be changed to show if stock has been
+added to the watchlist.
+
+Popup to add to watchlist: User can add a new watchlist name or
+select existing watchlist to add the stock to watchlist. Use techniques to
+save and show watchlist items from what the user has added to
+watchlist from Stocks Details screen
+
+View All Screen: A page with pagination where users can see all the list of
+stocks under specific sections on explore. Should contain pagination if
+needed.
 
 ## Screenshots
 
-[Placeholder for app screenshots]
+<p align="center">
+  <img src="Assets/1.png" width="150" />
+  <img src="Assets/3.jpeg" width="150" />
+  <img src="Assets/4.jpeg" width="150" />
+  <img src="Assets/5.jpeg" width="150" />
+</p>
+
+<p align="center">
+  <img src="Assets/6.jpeg" width="150" />
+  <img src="Assets/7.jpeg" width="150" />
+  <img src="Assets/8.jpeg" width="150" />
+</p>
 
 ## Architecture
 
-[Placeholder for architecture diagram]
+![Architecture Diagram](Assets/2.png)
 
 ## Installation
 
@@ -220,115 +251,3 @@ Assignment/
 - Stock quote and time series data
 - Symbol search functionality
 - Rate limiting (5 requests/minute)
-
-## Scripts
-
-- `npm start` - Start Metro bundler
-- `npm run android` - Run on Android
-- `npm run ios` - Run on iOS
-- `npm run lint` - Run ESLint
-- `npm test` - Run tests
-
-## Clean Build Commands
-
-### For Android
-
-Clean build and install on device/emulator:
-
-```bash
-# Navigate to project root
-cd Assignment
-
-# Clean all caches
-npm start -- --reset-cache &
-
-# In a new terminal, clean Android build
-cd android
-./gradlew clean
-cd ..
-
-# Build and install
-npx react-native run-android
-```
-
-One-liner clean build:
-
-```bash
-cd Assignment && cd android && ./gradlew clean && cd .. && npx react-native run-android --reset-cache
-```
-
-### For iOS
-
-Clean build and install on simulator/device:
-
-```bash
-# Navigate to project root
-cd Assignment
-
-# Clean all caches
-npm start -- --reset-cache &
-
-# In a new terminal, clean iOS build
-cd ios
-rm -rf build
-rm -rf Pods
-rm -rf ~/Library/Developer/Xcode/DerivedData/*
-pod deintegrate
-pod install
-cd ..
-
-# Build and install
-npx react-native run-ios
-```
-
-One-liner clean build:
-
-```bash
-cd Assignment && cd ios && rm -rf build Pods && pod install && cd .. && npx react-native run-ios --reset-cache
-```
-
-### Nuclear Clean (When Everything Breaks)
-
-Complete clean and rebuild:
-
-```bash
-# Navigate to project root
-cd Assignment
-
-# Remove all build artifacts and dependencies
-rm -rf node_modules
-rm -rf ios/Pods ios/build
-rm -rf android/build android/app/build
-rm -rf ~/.gradle/caches/
-
-# Clear Metro cache
-rm -rf $TMPDIR/metro-*
-rm -rf $TMPDIR/haste-map-*
-
-# Reinstall dependencies
-npm install
-
-# iOS: Reinstall pods
-cd ios
-pod deintegrate
-pod install
-cd ..
-
-# Android: Clean gradle
-cd android
-./gradlew clean
-cd ..
-
-# Start fresh
-npx react-native start --reset-cache
-```
-
-Then in a new terminal:
-
-```bash
-# For Android
-npx react-native run-android
-
-# For iOS
-npx react-native run-ios
-```

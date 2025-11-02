@@ -1,0 +1,57 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Ruby/Bundler
+.bundle/
+vendor/bundle/
+Gemfile.lock
+
+# Build outputs
+android/app/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/build/
+android/.cxx
+android/app/.cxx/
+android/.kotlin/
+android/.classpath
+android/.project
+android/.settings/
+ios/build/
+ios/Pods/
+ios/DerivedData/
+ios/Podfile.lock
+ios/.xcode.env.local
+
+# React Native
+.expo/
+.expo-shared/
+dist/
+build/
+coverage/
+
+# Metro bundler cache
+.metro/
+.cache/
+babel-loader-cache/
+*.packager-cache
+*.metro-cache
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Env
+.env
+.env.*
